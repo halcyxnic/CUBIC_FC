@@ -2,8 +2,15 @@
 @echo off
 
 :: remove the history directory (if it exists) in both folders
-rmdir .\Altium\CUBIC_FC_Project\History\ /s /q
-rmdir .\Altium\CUBIC_FC_Parts\History\ /s /q
+IF exist .\Altium\CUBIC_FC_Project\History\ (
+    echo Removing History folder from Project files...
+    rmdir .\Altium\CUBIC_FC_Project\History\ /s /q
+)
+
+IF exist .\Altium\CUBIC_FC_Parts\History\ (
+    echo Removing History folder from Library files...
+    rmdir .\Altium\CUBIC_FC_Parts\History\ /s /q
+)
 
 :: prompt user for input
 :input_message
