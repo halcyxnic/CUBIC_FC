@@ -1,4 +1,5 @@
 :: turn console feedback off
+cls
 @echo off
 
 :: count arguments and exit if no arguments are passed
@@ -15,6 +16,8 @@ IF [%_command%]==[all] GOTO ALL
 IF [%_command%]==[help] GOTO HELP
 IF [%_command%]==[altium] GOTO ALTIUM
 IF [%_command%]==[sw] GOTO SW
+
+echo Invalid argument. Arguments can be found using "%0 help"
 GOTO EOF
 
 :: ============================= HELP =============================
