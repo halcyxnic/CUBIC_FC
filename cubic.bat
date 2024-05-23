@@ -1,5 +1,4 @@
 :: turn console feedback off
-cls
 @echo off
 
 :: count arguments and exit if no arguments are passed
